@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
@@ -66,11 +65,7 @@ public class MyHashMap {
             System.out.println("Key not present ");
             return false;
         }
-        if (arr[key].size() ==0)
-            return false;
-        else {
-            return true;
-        }
+        return arr[key].size() != 0;
 
     }
     Object key(int key){

@@ -1,4 +1,3 @@
-
 public class MyArrayList<AnyType> implements Iterable<AnyType>
 {
     /**
@@ -63,7 +62,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType>
             return;
 
         AnyType [ ] old = theItems; // copying the elements into another array of the same type
-        theItems = (AnyType []) new Object[ newCapacity ]; // recreating the reference with new capcity reserved
+        theItems = (AnyType []) new Object[ newCapacity ]; // recreating the reference with new capacity reserved
         for( int i = 0; i < size( ); i++ )
             theItems[ i ] = old[ i ]; // copying until the end of old
     }

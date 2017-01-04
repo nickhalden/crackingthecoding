@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * Created by vn0dht3 on 11/26/16.
  */
@@ -11,9 +9,9 @@ class TestCracking{
         System.out.println(cracking.permutationCheck("dog","god"));
         String dates[]={"Mon Jan  5 16:05:29"};
 
-        String ans[]=cracking.reformatDate(dates);
+        String ans[]= Cracking.reformatDate(dates);
 
-        for (Object ele: cracking.reformatDate(dates)){
+        for (Object ele: Cracking.reformatDate(dates)){
             System.out.println(ele);
 
         }

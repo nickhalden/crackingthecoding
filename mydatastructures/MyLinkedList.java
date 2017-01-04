@@ -1,4 +1,3 @@
-
 /**
  * LinkedList class implements a doubly-linked list.
  */

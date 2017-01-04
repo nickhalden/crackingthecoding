@@ -29,8 +29,8 @@ public class Cracking {
         char arr2[]=input2.toCharArray();
         Arrays.sort(arr1);
         Arrays.sort(arr2);
-        String test1=(String)arr1.toString();
-        String test2=(String)arr2.toString();
+        String test1= arr1.toString();
+        String test2= arr2.toString();
         System.out.println(test1.length()+test2.length());
 
         if (test1.equals(test2)){
