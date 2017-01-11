@@ -1,5 +1,3 @@
-package hedvig;
-
 import java.util.List;
 
 /**

@@ -5,7 +5,12 @@ import java.util.Iterator;
 /**
  * Created by vn0dht3 on 1/4/17.
  */
-public class MyStack<Anytype> implements Iterable<Anytype> {
+
+// use the previous array code to make it generic or do it by yourself by implementing the iterator method
+
+
+
+public class MyGenericStackArray<Anytype> implements Iterable<Anytype> {
 
     Anytype stack[]=(Anytype[]) new Object[10];
 

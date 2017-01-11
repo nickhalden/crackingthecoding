@@ -51,8 +51,13 @@ public class SinglyLinkedList {
 
         int k=0;
         while (fastPointer!=null){ // calculate the size of the list
-               fastPointer=fastPointer.nextNode.nextNode;
-               k=k+2;
+            if (fastPointer.nextNode!=null){ // check doing assigning next.next
+                fastPointer=fastPointer.nextNode.nextNode; // even elements
+                k=k+2;
+            }else {
+                fastPointer=fastPointer.nextNode; // means that the next node has null as it's next member
+                k=k+1; // odd element
+            }
         }
 
         if (k-position<0) return null; // can's insert
@@ -93,6 +98,13 @@ public class SinglyLinkedList {
         }
     }
 
+    //implement delete the k'th node
+    // reverse the linked list
+    // union
+    // intersection
+    // circular linkedin list
+    // other cracking the coding question
+
     public static void main(String[] args) {
         SinglyLinkedList linkedList= new SinglyLinkedList();
         Random rn= new Random(100);
@@ -106,6 +118,8 @@ public class SinglyLinkedList {
         for(int i=20;i>10;i--){
             linkedList.addNodeFront(i); // adds Node in the front  just like a queue's enqueue operation
         }
+        linkedList.addNode(22); // to makes the elements odd
+
 
 
         linkedList.addKthPositionFromEnd(33,3);
