@@ -86,25 +86,51 @@ public class LinkedListWithACycle {
     }
 
 
-    public void reverseLinkedList(SinglyNodeWithCycles head,SinglyNodeWithCycles pointer){
-        //@Todo
+//    public void reverseLinkedList(SinglyNodeWithCycles head,SinglyNodeWithCycles pointer){
+//        //@Todo
+//        //using recursion
+//        // base : reach until the end of the linkedlist  and return
+//        // make modifications to the linked list (modify the links and remove the links)
+//
+//        if (head.next == null || head.next.next!=null){
+//            pointer.next=null;
+//            head.next=pointer;
+//            return;
+//        }
+//
+//
+//        SinglyNodeWithCycles nextNode=head.next.next; // one node ahead move the
+////        SinglyNodeWithCycles slowPointer=head;
+////        head=head.next;
+////        head.next=temp;
+////        reverseList(slowPointer.next);
+////        pointer=head; // save the node
+////        head= head.next; // move the head
+////        pointer.next=null; // break the association
+////        reverseLinkedList(head,pointer); // pass the moved head and the previous node for joining it
+//
+//
+//
+//
+//    }
 
+    public void reverseList(){
 
-        if (head.next == null){
-            pointer.next=null;
-            head.next=pointer;
+        if(head.next==null){
             return;
         }
-
-        pointer=head; // save the node
-        head= head.next; // move the head
-        pointer.next=null; // break the association
-        reverseLinkedList(head,pointer); // pass the moved head and the previous node for joining it
-
+        SinglyNodeWithCycles previousNode=head;
+        head=head.next;
+        SinglyNodeWithCycles newHead=head;
+        reverseList();
+//
+//        while (newHead.next!=null)
+//        newHead.next=previousNode;
 
 
 
     }
+
 
     void printList(){
         SinglyNodeWithCycles pointer= head;
@@ -117,37 +143,56 @@ public class LinkedListWithACycle {
     }
 
     public static void main(String[] args) {
-        LinkedListWithACycle linkedListWithACycle= new LinkedListWithACycle();
-
+//        LinkedListWithACycle linkedListWithACycle= new LinkedListWithACycle();
+//
         Random random=new Random();
+//        System.out.println("adding" + 2);
+//        System.out.println("adding" + 30);
+//        linkedListWithACycle.addNode(2);
+//        linkedListWithACycle.addNode(30);
+//        for (int i=0;i<3;i++) {
+//            int value = random.nextInt(100);
+//            System.out.println("adding "+value);
+//            linkedListWithACycle.addNode(value);
+//        }
+//        linkedListWithACycle.addNode(40);
+//        System.out.println("adding" + 40);
+//        linkedListWithACycle.printList();
+//
+//
+//        //linkedListWithACycle.reverseLinkedList();
+//
+//
+//
+//        System.out.println("*********");
+//
+//        linkedListWithACycle.printNodes();
+//
+//        System.out.println("------");
+//
+//
+//        LinkedListWithACycle obj= new LinkedListWithACycle();
+//        obj.addACycle();
+//        obj.detectAndRemoveLoop();
+
+        LinkedListWithACycle reverseme= new LinkedListWithACycle();
+
         System.out.println("adding" + 2);
         System.out.println("adding" + 30);
-        linkedListWithACycle.addNode(2);
-        linkedListWithACycle.addNode(30);
+        reverseme.addNode(2);
+        reverseme.addNode(30);
         for (int i=0;i<3;i++) {
             int value = random.nextInt(100);
             System.out.println("adding "+value);
-            linkedListWithACycle.addNode(value);
+            reverseme.addNode(value);
         }
-        linkedListWithACycle.addNode(40);
-        System.out.println("adding" + 40);
-        linkedListWithACycle.printList();
+        reverseme.addNode(40);
 
+        reverseme.printList();
 
-        linkedListWithACycle.reverseLinkedList();
+        reverseme.reverseList();
 
-
-
-        System.out.println("*********");
-
-        linkedListWithACycle.printNodes();
-
-        System.out.println("------");
-
-
-        LinkedListWithACycle obj= new LinkedListWithACycle();
-        obj.addACycle();
-//        obj.detectAndRemoveLoop();
+        reverseme.printList();
 
     }
 

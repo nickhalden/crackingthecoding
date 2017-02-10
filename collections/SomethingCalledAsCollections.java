@@ -1,3 +1,5 @@
+package collections;
+
 /**
  * Created by vn0dht3 on 12/7/16.
  */

@@ -1,3 +1,5 @@
+package FunctionalProgramming;
+
 /**
  * Created by vn0dht3 on 12/21/16.
  */
