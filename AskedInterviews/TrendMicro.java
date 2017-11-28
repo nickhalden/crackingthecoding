@@ -38,21 +38,21 @@ public class TrendMicro {
     public int Solution(int a, int b){
 
 
-        Character result;
-
-        if (a<b){
-            //256
-            //98222222
-            result[]= new Character[100];
-            String first=(String.valueOf(a));
-            String second=(String.valueOf(a));
-            char[] arr =first.toCharArray();
-            char[] srr= second.toCharArray();
-            for (int i=0;i<arr.length;i++){
-                result[i]=arr[i];
-            }
-
-        }
+//        Character result;
+//
+//        if (a<b){
+//            //256
+//            //98222222
+//            result[]= new Character[100];
+//            String first=(String.valueOf(a));
+//            String second=(String.valueOf(a));
+//            char[] arr =first.toCharArray();
+//            char[] srr= second.toCharArray();
+//            for (int i=0;i<arr.length;i++){
+//                result[i]=arr[i];
+//            }
+//
+//        }
 
         return 0;
     }
